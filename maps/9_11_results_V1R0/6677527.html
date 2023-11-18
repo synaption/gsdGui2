@@ -1,0 +1,485 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Google Maps - gmplot</title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
+<script type="text/javascript">
+    function initialize() {
+        var map = new google.maps.Map(document.getElementById("map_canvas"), {
+            zoom: 16,
+            center: new google.maps.LatLng(29.961037, -90.063453)
+        });
+
+        var marker_icon_0000FF = {
+            url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAiCAYAAACwaJKDAAAABmJLR0QA/wD/AP+gvaeTAAAB/UlEQVRIia3VMWsUQRgG4GcvJCqopZhITgs7EcVCLMTKwkJTqoj4C4ToT1AbRZSIjWCrRbCL2JigRlJFDCiIpBCSwogYRFGjiXKfxewSOS93l9t7Ydhjdr7n5nZn5jLNsweHsQMV1PAeU3jTova/HMU0gmpwPDibX6uR+k3n41omw1WyGqeDmaAWRF2biXQ/q6XxsmbgCFuChw2gRm0s0ngja8HDbAym2gSLNhWpznA9OIAf3FgnWLSbkeoN/IteYWew0iG6EuyK5KRlAkOcQ287L7NBeqV6Q0VPD5aZ6HCWRZuI5Oip5F/TR7XDWRapSo7eympnlERX6ytYSW2+JDqvsIr9/JbJkuik5KgVPZcZDJZLLKnBSM5q+vGNax2i1yPV66+f/3n6gmfrBCeDDZHqG+dWOiBetAm+DLZGqls7Ge4zECy0ABeL5ziqydFXZBNecywan6VFOxWYxeZWYJH9+M29NcDxkFb7kXbBIrfTz/tVB9aCg4EH6wVhG5a4W4c+CWmB7+0EhTvsq0NPBiY6BeEAglc5+CXyv44zZVCY5VKOjgaWtHjjlWY38zxiPP/4GJ7ie6lp4kTahsvB7sDFsiBsR34mZIFD3UDhExcCf6Qd1zTtPFOY4znpeP/ZLXSRdwXaMu2in/lKOoi7hn7MrwvdRD/k17l2Bv8FssfECaMr+zoAAAAASUVORK5CYII=",
+            labelOrigin: new google.maps.Point(10, 11)
+        };
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.961525, -90.064059),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.962803, -90.063217),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.959351, -90.061007),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.957615, -90.065110),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.959137, -90.068252),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.962269, -90.059578),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(29.963909, -90.067329),
+            icon: marker_icon_0000FF,
+            map: map
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FFFF00',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FFFF00',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.9610375, -90.0634532),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961005049966193, -90.06353552850018),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.9611675626457, -90.06347380400625),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961159640558208, -90.06347673890743),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.960995023517636, -90.06361617863188),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.960930082048343, -90.06282275923384),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.960975495952027, -90.06343895366518),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961158193798383, -90.06348148235661),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.960730020910727, -90.0633737332426),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961073827682124, -90.06346161069885),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96122284866849, -90.06360620621615),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961885487039424, -90.06335245086427),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961153651029644, -90.06348055481679),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.962188968173308, -90.06357254191369),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96068303976583, -90.06359880714912),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961425836464684, -90.06314211864081),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FF0000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.960655651607567, -90.06339455381885),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961150648739267, -90.0634267514164),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961150648739263, -90.06342675141642),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961081427443663, -90.06342364949094),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961023994615395, -90.06342318944196),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961031218659016, -90.06343101117042),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961060233566783, -90.06343460802458),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.9610269969397, -90.0634403673709),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961064131472916, -90.06344542454221),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961101254868716, -90.06345027141218),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96108605564374, -90.06345319625318),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96109906023318, -90.06345454204842),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96111965428004, -90.06345587392428),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96114257514281, -90.06345654167896),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.96113632826709, -90.06345705003555),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#6495ED',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#6495ED',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961157161795413, -90.06345750390115),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#000000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#000000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961153651029644, -90.06348055481679),
+            radius: 5
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FFFFFF',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FFFFFF',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961153651029644, -90.06348055481679),
+            radius: 311.33933294603617
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FFFFFF',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FFFFFF',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.959351, -90.0610071),
+            radius: 4
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FFFFFF',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FFFFFF',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.9622686, -90.0595782),
+            radius: 102.68
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#FFFFFF',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#FFFFFF',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.9591371, -90.0682524),
+            radius: 204.87
+        });
+
+        new google.maps.Circle({
+            strokeColor: '#008000',
+            strokeOpacity: 1.0,
+            strokeWeight: 1,
+            fillColor: '#008000',
+            fillOpacity: 0.3,
+            map: map,
+            center: new google.maps.LatLng(29.961157161795413, -90.06345750390115),
+            radius: 4
+        });
+
+    }
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+    <div id="map_canvas" style="width: 100%; height: 100%;" />
+</body>
+</html>
