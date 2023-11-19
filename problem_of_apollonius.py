@@ -12,6 +12,8 @@ def solveApollonius(c1, c2, c3, s1, s2, s3):
     >>> solveApollonius((0, 0, 1), (4, 0, 1), (2, 4, 2), -1,-1,-1)
     Circle(x=2.0, y=0.8333333333333333, r=1.1666666666666667) 
     '''
+    
+
     x1, y1, r1 = c1
     x2, y2, r2 = c2
     x3, y3, r3 = c3
@@ -47,8 +49,10 @@ def solveApollonius(c1, c2, c3, s1, s2, s3):
  
     # Find a root of a quadratic equation. This requires the circle centers not to be e.g. colinear
     D = b*b-4*a*c
+
     rs = (-b-math.sqrt(D))/(2*a)
-    
+    #(241578.630938138-math.sqrt(-1344509.93933105)
+
     xs = M+N*rs
     ys = P+Q*rs
     
@@ -57,8 +61,8 @@ def solveApollonius(c1, c2, c3, s1, s2, s3):
 
 def convert2xy(coordinates, origen):
     k = gd.Geodesic() #defaults to WGS84
-    distance = abs(k.inverse(origen, coordinates).base[0,0])
-    azimuth = k.inverse(origen, coordinates).base[0,1]
+    distance = abs(k.inverse(origen, coordinates)[0][0])
+    azimuth = k.inverse(origen, coordinates)[0][1]
     x = distance*cos(azimuth)
     y = distance*sin(azimuth)
     #print('azimuth: '+ str(azimuth) + " distance: "+ str(distance) + " x: "+ str(x)+" y: "+str(y))
@@ -69,8 +73,8 @@ def convert2coordinates(x, y, origen):
     distance = sqrt((x)**2 + (y)**2)
     azimuth = acos(x/distance)
     azimuth = azimuth*180/3.1415926435
-    sourcelon = k.direct(origen, azimuth, distance).base[0,0]
-    sourcelat = k.direct(origen, azimuth, distance).base[0,1]
+    sourcelon = k.direct(origen, azimuth, distance)[0][0]
+    sourcelat = k.direct(origen, azimuth, distance)[0][1]
     return sourcelon, sourcelat, distance
 
 

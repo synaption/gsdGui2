@@ -10,7 +10,7 @@ from tdoa import *
 from geo import *
 import time
 
-gmap3 = gmplot.GoogleMapPlotter(29.9610375, -90.0634532, 16)
+gmap3 = gmplot.GoogleMapPlotter(41.784695,-88.210954, 16)
 gmap3 = gmap(gmap3)
 
 def Average(lst):
@@ -22,28 +22,35 @@ def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe("plot_hits/#")
+    client.subscribe("locate/#")
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
     global gmap3
-    if msg.topic == 'plot_hits':
+    if msg.topic == 'locate':
+        with open('all_combinations_of_group_of_first_hits_pickle', 'wb') as fd:
+            fd.write(msg.payload)
         with open("all_combinations_of_group_of_first_hits_pickle", "rb") as fp:   # Unpickling
             all_combinations_of_group_of_first_hits = pickle.load(fp)
         #print(msg.topic+" "+str(group_of_first_hits))
-        #print(all_combinations_of_group_of_first_hits)
+        print("all_combinations_of_group_of_first_hits " + str(all_combinations_of_group_of_first_hits))
         sourcelat_list = []
         sourcelon_list = []
-        for combination in all_combinations_of_group_of_first_hits[:]:
+        
+        for combination in all_combinations_of_group_of_first_hits:
+            print(combination)
             try: 
                 detected_location = combination[3]
+                print("detected_location" + str(detected_location))
                 sourcelat = detected_location['sourcelat']
             except:
-                all_combinations_of_group_of_first_hits.remove(combination)
+                print("remove combination")
+                #all_combinations_of_group_of_first_hits.remove(combination)
 
         for combination in all_combinations_of_group_of_first_hits:
             try:
                 pi1 = combination[0]
+                print("asdf")
                 e_id = pi1['event_id']
                 detected_location = combination[3]
                 sourcelat = detected_location['sourcelat']
@@ -52,7 +59,7 @@ def on_message(client, userdata, msg):
                 sourcelat_list.append(sourcelat)
                 sourcelon_list.append(sourcelon)
             except Exception as e:
-                # ... PRINT THE ERROR MESSAGE ... #
+                print('# ... PRINT THE ERROR MESSAGE ... #')
                 print(e)
                 pass
         
@@ -111,12 +118,13 @@ def on_message(client, userdata, msg):
                 gmap3 = map_hit(gmap3, float(avg_sourcelat), float(avg_sourcelon), "green", 4)
             except:
                 pass
+            e_id="asdf"
             map_name = "maps/"+str(e_id)+".html"
             print(map_name)
             gmap3.draw( map_name )
             sourcelat_list = []
             sourcelon_list = []
-            gmap3 = gmplot.GoogleMapPlotter(29.9610375, -90.0634532, 16)
+            gmap3 = gmplot.GoogleMapPlotter(41.784695,-88.210954, 16)
             gmap3 = gmap(gmap3)
         except Exception as e:
                     # ... PRINT THE ERROR MESSAGE ... #
